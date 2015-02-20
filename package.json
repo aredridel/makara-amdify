@@ -1,0 +1,20 @@
+{
+  "name": "makara-amdify",
+  "version": "1.0.0",
+  "description": "Tools to make AMD content bundles for krakenjs apps.",
+  "main": "index.js",
+  "author": "Aria Stewart <ariastewart@paypal.com>",
+  "license": "Apache 2.0",
+  "scripts": {
+    "test": "tape test/**.js"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "glob": "^4.0.6",
+    "iferr": "^0.1.2",
+    "mkdirp": "^0.5.0",
+    "spundle": "^1.0.0",
+    "tape": "^3.0.3",
+    "through2": "^0.6.3"
+  }
+}
