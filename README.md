@@ -11,6 +11,7 @@ Builds AMD bundles defining `_languagepack` for each locale in `projectRoot/loca
 ```js
 var ma = require('makara-amdify');
 ma.build({
+	format: 'amd' // also 'global'
 	buildRoot: '.build',
 	appRoot: '.'
 }, cb);
