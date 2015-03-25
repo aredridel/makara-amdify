@@ -8,7 +8,9 @@ var async = require('async');
 var mkdirp = require('mkdirp');
 var iferr = require('iferr');
 
-module.exports = function build(appRoot, cb) {
+module.exports = function build(options, cb) {
+    var appRoot = options.appRoot || '.';
+    var buildRoot =  options.buildRoot || path.resolve(appRoot, '.build');
     var localeRoot = path.resolve(appRoot, 'locales');
 
     glob(path.resolve(localeRoot, '*/*/'), function (err, paths) {
@@ -18,7 +20,6 @@ module.exports = function build(appRoot, cb) {
 
         var locales = paths.map(function (p) {
             var m = /(.*)\/(.*)/.exec(path.relative(localeRoot, p));
-
             return m[2] + '-' + m[1];
         });
 
@@ -28,9 +29,9 @@ module.exports = function build(appRoot, cb) {
     function streamLocale(locale, cb) {
         var output = through();
         var m = /(.*)-(.*)/.exec(locale); // Use a real BCP47 parser.
-        var outputRoot = path.resolve(appRoot, path.join('.build', locale));
+        var outputRoot = path.join(buildRoot, locale);
         mkdirp(outputRoot, iferr(cb, function (out) {
-            spundle(path.resolve(appRoot, 'locales'), m[2], m[1], iferr(cb, function (out) {
+            spundle(localeRoot, m[2], m[1], iferr(cb, function (out) {
                 fs.writeFile(path.resolve(outputRoot, '_languagepack.js'), 'define("_languagepack", function () { return ' + JSON.stringify(out) + '; });', cb);
             }));
         }));
