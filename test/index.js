@@ -35,7 +35,7 @@ test('languge pack path', function (t) {
     t.equal(bksb.languagePackPath({
         country: "XC",
         language: "en"
-    }), 'en-XC/_languagepack.js');
+    }), 'en-XC/_languagepack');
     t.end();
 });
 

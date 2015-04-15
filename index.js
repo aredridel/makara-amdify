@@ -6,10 +6,10 @@ module.exports = {
     build: function (root, cb) {
         require('./build')(root, cb);
     },
-    languagePackPath: function () {
+    languagePackPath: function (locale) {
         // Require.js insists on adding .js to everything, 
         // even though there's no reason javascript URLs have to have .js in them.
-        return mlpp.languagePackPath().replace(/\.js$/, '');
+        return mlpp.languagePackPath(locale).replace(/\.js$/, '');
     },
     middleware: mlpp.middleware,
 };
