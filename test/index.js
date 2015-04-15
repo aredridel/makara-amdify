@@ -39,3 +39,11 @@ test('languge pack path', function (t) {
     t.end();
 });
 
+test('middleware', function (t) {
+    var res = { locals: { locale: 'en-XC' } }
+    bksb.middleware()({}, res, function () {
+        t.equal(res.locals.makara.languagePackPath, 'en-XC/_languagepack');
+        t.end();
+    });
+});
+

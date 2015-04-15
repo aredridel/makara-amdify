@@ -7,9 +7,11 @@ module.exports = {
         require('./build')(root, cb);
     },
     languagePackPath: function (locale) {
-        // Require.js insists on adding .js to everything, 
+        // Require.js insists on adding .js to everything,
         // even though there's no reason javascript URLs have to have .js in them.
-        return mlpp.languagePackPath(locale).replace(/\.js$/, '');
+        return mlpp.languagePackPath(locale, true);
     },
-    middleware: mlpp.middleware,
+    middleware: function () {
+        return mlpp.middleware({nosuffix: true});
+    }
 };
