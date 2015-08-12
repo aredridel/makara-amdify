@@ -12,11 +12,9 @@
   "dependencies": {
     "async": "^0.9.0",
     "glob": "^4.0.6",
-    "iferr": "^0.1.2",
+    "makara-builder": "git://github.com/grawk/makara-builder#master",
     "makara-languagepackpath": "^1.1.0",
-    "mkdirp": "^0.5.0",
-    "spundle": "^1.0.0",
-    "tape": "^3.0.3",
-    "through2": "^0.6.3"
+    "makara-writer-amd": "git://github.com/grawk/makara-writer-amd#master",
+    "tape": "^3.0.3"
   }
 }
