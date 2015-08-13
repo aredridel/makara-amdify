@@ -4,7 +4,7 @@ var mlpp = require('makara-languagepackpath');
 var writer = require('makara-writer-amd');
 module.exports = {
     build: function (root, cb) {
-        require('makara-builder')(root, writer(root), cb);
+        require('makara-builder')(root, writer, cb);
     },
     languagePackPath: function (locale) {
         // Require.js insists on adding .js to everything,
