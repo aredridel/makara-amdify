@@ -4,7 +4,7 @@
   "description": "Tools to make AMD content bundles for krakenjs apps.",
   "main": "index.js",
   "author": "Aria Stewart <ariastewart@paypal.com>",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "scripts": {
     "test": "tape test/**.js"
   },
@@ -12,9 +12,9 @@
   "dependencies": {
     "async": "^0.9.0",
     "glob": "^4.0.6",
-    "makara-builder": "git://github.com/grawk/makara-builder#master",
+    "makara-builder": "~0.0.1",
     "makara-languagepackpath": "^1.1.0",
-    "makara-writer-amd": "git://github.com/grawk/makara-writer-amd#master",
+    "makara-writer-amd": "~0.0.1",
     "tape": "^3.0.3"
   }
 }
