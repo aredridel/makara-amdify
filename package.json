@@ -14,7 +14,9 @@
     "glob": "^4.0.6",
     "makara-builder": "^1.0.0",
     "makara-languagepackpath": "^1.1.0",
-    "makara-writer-amd": "^1.0.0",
+    "makara-writer-amd": "^1.0.0"
+  },
+  "devDependencies": {
     "tape": "^3.0.3"
   }
 }
