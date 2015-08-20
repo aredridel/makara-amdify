@@ -1,6 +1,6 @@
 "use strict";
 
-var build = require('./build');
+var build = require('makara-builder');
 
 build(process.argv[2], function (err) {
     if (err) {
