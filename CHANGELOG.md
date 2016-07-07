@@ -1,4 +1,4 @@
-### v1.1.8-alpha.1
+### v1.1.8-alpha.2
 
 * REFACTOR: to use makara-builder@2
 
