@@ -1,4 +1,4 @@
-### unreleased
+### v1.1.8
 
 * REFACTOR: to use makara-builder@2. See: https://github.com/krakenjs/makara-builder/blob/v2.x/README.md#api and https://github.com/krakenjs/makara-builder/blob/v2.x/CHANGELOG.md#v200
 
