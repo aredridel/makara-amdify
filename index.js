@@ -11,7 +11,9 @@ module.exports = {
         // even though there's no reason javascript URLs have to have .js in them.
         return mlpp.languagePackPath(locale, true);
     },
-    middleware: function () {
-        return mlpp.middleware({nosuffix: true});
+    middleware: function (_options) {
+        var options = Object.assign({nosuffix: true}, _options);
+
+        return mlpp.middleware(options);
     }
 };
